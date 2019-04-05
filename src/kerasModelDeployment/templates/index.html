@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+
+<h6 align="center">Choose driver image to classify</h6>
+
+<div>
+    <form align="center" id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label" align="center">
+            Upload Driver Image
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;width: 27%; margin: 0 auto;">
+        <div class="img-preview" align="center">
+            <div id="imagePreview" >
+            </div>
+        </div>
+        <div align="center">
+            <button type="button" class="upload-label" id="btn-predict" align="center">Predict Driver Behavior</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;align:center;width: 27%; margin: 0 auto;"></div>
+
+    <h4 id="result" align="center">
+        <span> </span>
+    </h4>
+
+</div>
+
+{% endblock %}
